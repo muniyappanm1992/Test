@@ -1,0 +1,3 @@
+col=['SNo', 'Lab Register No', 'Plant', 'Material','Storage Tank', 'Batch','Material Description','Qty in Storage (KL)', 'Sample Drawn By', 'Sample Drawn Date', 'Source of Sample', 
+'Name of Source', 'Sample Type', 'Qty of Sample (L)','Test Required', 'Test Reason', 'Last Receipt Date',
+'Test Laboratory','Dispatching Location Test Report No', 'SKO Flash Point', 'Created By', 'Created On','Created At', 'Status', 'Inspection Lot', 'Remarks']

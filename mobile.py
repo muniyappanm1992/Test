@@ -1,0 +1,13 @@
+import pandas as pd
+yv209d=pd.read_excel(r"\\192.168.1.39\Muniyappan\DryOut\yv209d.xlsx")
+sheets=pd.read_excel(r"\\192.168.1.39\Muniyappan\DryOut\Mobile_Number.xlsx")
+sheets['Ship-To Party']=sheets['Ship-To Party'].astype('str')
+sheets['Ship-To Party']=sheets['Ship-To Party'].map(lambda x:"0000"+str(x) if len(x)<=6 else x)
+yv209d['Ship2Party']=yv209d['Ship2Party'].astype('str')
+yv209d['Ship2Party']=yv209d['Ship2Party'].map(lambda x:"0000"+str(x) if len(x)<=6 else x)
+df_f1=pd.merge(left=yv209d,right=sheets,how='inner',left_on=['Ship2Party'],right_on=['Ship-To Party'])
+print(len(yv209d))
+print(sheets.columns)
+# print(df_f1)
+print(df_f1.columns)
+# df_f1.to_excel("out.xlsx")
